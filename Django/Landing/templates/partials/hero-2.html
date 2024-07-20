@@ -1,0 +1,31 @@
+{% load static %}
+
+{% block hero %}
+<section class="hero-2 position-relative overflow-hidden" style="background-image: url(/static/images/hero-2-bg.png);" id="home">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-5">
+                <span class="badge badge-soft-primary mb-4">Creative Design</span>
+                <h1 class="font-weight-semibold mb-4 hero-2-title">We Help Startups Launch Their Products</h1>
+                <p class="mb-5 text-muted">Nemo enim ipsam voluptatem quia voluptas sit aut aspernatur aut fugit sed quia consequuntur magni dolores ratione voluptatem nesciunt.</p>
+                <div class="custom-search">
+                    <div class="input-group mb-lg-0 mb-4">
+                        <input type="text" class="form-control rounded-pill" placeholder="Write to us" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        <div class="input-group-append">
+                          <button class="btn btn-sm btn-primary rounded-pill px-2" type="button" id="button-addon2"><i data-feather="chevron-right"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- end col -->
+            <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
+                <div class="mt-lg-0 mt-4">
+                    <img src="{% static 'images/hero-2-img.png' %}" alt="" class="img-xl-responsive" />
+                </div>
+            </div>
+            <!-- end col -->
+        </div>
+        <!-- end row -->
+    </div>
+</section>
+{% endblock hero %}

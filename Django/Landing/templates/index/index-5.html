@@ -1,0 +1,53 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+
+{% block navbar %}
+    <!--Navbar Start-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-custom fixed-top" id="navbar">
+        <div class="container">
+            <!-- LOGO -->
+            <a class="navbar-brand logo" href="{% url 'index' %}">
+                <img src="{% static 'images/logo-dark.png' %}" alt="" class="logo-dark" height="28" />
+                <img src="{% static 'images/logo-light.png' %}" alt="" class="logo-light" height="28" />
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
+                    <li class="nav-item">
+                        <a href="#home" class="nav-link">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#services" class="nav-link">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#features" class="nav-link">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#pricing" class="nav-link">Pricing</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#team" class="nav-link">Team</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#blog" class="nav-link">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="#contact" class="nav-link">Contact Us</a>
+                    </li>
+                </ul>
+                <a href="" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Buy Now</a>
+            </div>
+        </div>
+        <!-- end container -->
+    </nav>
+    <!-- Navbar End -->
+{% endblock navbar %}
+
+
+
+{% block hero %}
+    {% include 'partials/hero-5.html' %}
+{% endblock hero %}

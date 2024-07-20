@@ -1,0 +1,51 @@
+{% load static %}
+
+{% block hero %}
+<section class="hero-1 bg-center bg-primary position-relative" style="background-image: url(images/hero-1-bg.png);" id="home">
+    <div class="container">
+        <div class="row align-items-center hero-content">
+            <div class="col-lg-5">
+                <h1 class="text-white display-4 font-weight-semibold mb-4 hero-1-title">Optimize Your Service Business</h1>
+                <p class="text-white-70 mb-4  mb-lg-5">Nemo enim ipsam voluptatem quia voluptas sit aut aspernatur aut fugit sed quia consequuntur magni dolores ratione voluptatem nesciunt.</p>
+                <a href="javascript: void(0);" class="btn btn-lg btn-light rounded-pill me-2">Get Started</a>
+                <div class="d-inline-block" data-bs-toggle="modal" data-bs-target="#watchvideomodal">
+                    <a href="javascript: void(0);" class="video-play-icon text-white">
+                        <span class="play-icon-circle align-middle me-2"><i class="icon-sm icon" data-feather="play"></i></span>
+                        <span>Watch The Video!</span>
+                    </a>
+                </div>
+            </div>
+            <!-- end col -->
+            <div class="col-lg-6 col-sm-10 mx-auto ms-lg-auto me-lg-0">
+                <div class="mt-lg-0 mt-4">
+                    <img src="{% static 'images/hero-1-img.png' %}" alt="" class="img-md-responsive" />
+                </div>
+            </div><!-- end col -->
+        </div><!-- end row -->
+
+        <!-- Modal -->
+        <div class="modal fade bd-example-modal-lg" id="watchvideomodal" data-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg">
+                <div class="modal-content hero-modal-0 bg-transparent">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    <video id="VisaChipCardVideo" class="w-100" controls="">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        <!--Browser does not support <video> tag -->
+                    </video>
+                </div>
+            </div>
+        </div>
+    <!-- end modal -->
+    </div>
+    <!-- end container -->
+    <div class="hero-bottom-shape shape-light">
+        <img src="{% static 'images/hero-1-bottom-shape.png' %}" alt="" class="img-fluid d-block mx-auto" />
+    </div>
+    <div class="hero-bottom-shape shape-dark">
+        <img src="{% static 'images/hero-1-bottom-shape-dark.png' %}" alt="" class="img-fluid d-block mx-auto" />
+    </div>
+    <!-- end hero shape -->
+</section>
+<!-- Hero End -->
+{% endblock hero %}

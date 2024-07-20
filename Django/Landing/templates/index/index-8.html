@@ -1,0 +1,23 @@
+{% extends 'partials/base.html' %}
+{% load static %}
+
+
+{% block navbar %}
+    {% include 'partials/navbar.html' %}
+{% endblock navbar %}
+
+
+
+{% block hero %}
+    {% include 'partials/hero-8.html' %}
+{% endblock hero %}
+
+
+
+{% block extra_js %}
+
+    <!--Particles JS-->
+    <script src="{% static 'js/particles.js' %}"></script>
+    <script src="{% static 'js/particles.app.js' %}"></script>
+
+{% endblock extra_js %}

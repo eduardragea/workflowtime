@@ -1,0 +1,91 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Qexal - Responsive Bootstrap 5 Landing Page Template</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Premium Bootstrap 5 Landing Page Template" />
+        <meta name="keywords" content="bootstrap 5, premium, marketing, multipurpose" />
+        <meta content="Themesbrand" name="author" />
+        <!-- favicon -->
+        <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
+
+            
+        {% block extra_css %}            
+        {% endblock extra_css %}
+
+        <!-- css -->
+        <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/materialdesignicons.min.css' %}" rel="stylesheet" type="text/css" />
+        <link href="{% static 'css/style.min.css' %}" rel="stylesheet" type="text/css" />
+    </head>
+
+
+    {% block body_data %}
+        <body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="20">
+    {% endblock body_data %}
+
+
+    {% block preloader %}
+        {% include 'partials/preloader.html' %}          
+    {% endblock preloader %}
+
+    {% block navbar %}
+    {% endblock navbar %}
+
+    {% block hero %}
+    {% endblock hero %}
+
+    {% block services %}
+        {% include 'partials/services.html' %}
+    {% endblock services %}
+
+    {% block features %}
+        {% include 'partials/features.html' %}
+    {% endblock features %}
+
+    {% block pricing %}
+        {% include 'partials/pricing.html' %}
+    {% endblock pricing %}
+
+    {% block team %}
+        {% include 'partials/team.html' %}
+    {% endblock team %}
+
+    {% block blog %}
+        {% include 'partials/blog.html' %}
+    {% endblock blog %}
+        
+    {% block cta %}
+        {% include 'partials/cta.html' %}
+    {% endblock cta %}
+
+    {% block contact %}
+        {% include 'partials/contact.html' %}
+    {% endblock contact %}
+ 
+    {% block footer %}
+        {% include 'partials/footer.html' %}
+    {% endblock footer %}
+
+    {% block styleswitcher %}
+        {% include 'partials/styleswitcher.html' %}
+    {% endblock styleswitcher %}
+
+
+        <!-- javascript -->
+        <script src="{% static 'js/bootstrap.bundle.min.js' %}"></script>
+        <script src="{% static 'js/smooth-scroll.polyfills.min.js' %}"></script>
+        <!-- feather-icons js -->
+        <script src="https://unpkg.com/feather-icons"></script>
+
+        {% block extra_js %}
+        {% endblock extra_js %}
+
+        <!-- App Js -->
+        <script src="{% static 'js/app.js' %}"></script>
+
+
+</body>
+</html>

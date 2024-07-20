@@ -1,0 +1,15 @@
+{% load static %}
+
+{% block styleswitcher %}
+<!-- Style switcher -->
+<div id="style-switcher">
+    <div class="bottom">
+        <a href="javascript: void(0);" id="mode" class="mode-btn text-white">
+            <i class="mdi mdi-white-balance-sunny mode-light"></i>
+            <i class="mdi mdi-moon-waning-crescent mode-dark"></i>
+        </a>
+        <a href="javascript: void(0);" class="settings" onclick="toggleSwitcher()"><i class="mdi mdi-cog  mdi-spin"></i></a>
+    </div>
+</div>
+
+{% endblock styleswitcher %}

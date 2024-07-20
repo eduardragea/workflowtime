@@ -1,0 +1,52 @@
+{% load static %}
+
+{% block hero %}
+
+<!-- Hero Start -->
+<section class="hero-5 position-relative" style="background-image: url(/static/images/hero-5-bg.png);" id="home">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="text-center rocket-image">
+                    <img src="{% static 'images/rocket.png' %}" alt="" class="img-fluid mx-auto img-dark">
+                    <img src="{% static 'images/rocket-light.png' %}" alt="" class="img-fluid mx-auto img-light">
+                    <h1 class="font-weight-semibold my-4 hero-5-title">We help startups launch their products with awesome website</h1>
+                    <p class="mb-5 text-muted subtitle w-75 mx-auto">Nemo enim ipsam voluptatem quia voluptas sit aut aspernatur aut fugit sed consequuntur magni dolores nesciunt.</p>
+                    <a href="#" class="btn btn-primary rounded-pill me-2">Get Started</a>
+                </div>
+                <div class="row justify-content-center mt-5">
+                    <div class="col-md-8">
+                        <div class="position-relative overflow-hidden rounded-lg shadow-lg">
+                            <img src="{% static 'images/hero-5-img.jpg' %}" alt="" class="img-fluid d-block mx-auto">
+                            <div class="bg-overlay bg-dark"></div>
+                            <div class="hero-5-img-content">
+                                <div class="d-inline-block" data-bs-toggle="modal" data-bs-target="#watchvideomodal">
+                                    <a href="javascript: void(0);" class="play-icon-circle video-play-icon">
+                                        <i class="icon ps-1" data-feather="play"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal -->
+                        <div class="modal fade bd-example-modal-lg" id="watchvideomodal" data-keyboard="false" tabindex="-1"
+                            aria-hidden="true">
+                            <div class="modal-dialog modal-dialog-centered modal-dialog modal-lg">
+                                <div class="modal-content hero-modal-0 bg-transparent">
+                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                                    <video id="VisaChipCardVideo" class="w-100" controls="">
+                                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                                        <!--Browser does not support <video> tag -->
+                                    </video>
+                                </div>
+                            </div>
+                        </div><!-- end modal -->
+                    </div><!-- end col -->
+                </div><!-- end row -->
+            </div><!-- end col -->
+        </div><!-- end row -->
+    </div>
+</section>
+<!-- Hero End -->
+
+
+{% endblock hero %}
