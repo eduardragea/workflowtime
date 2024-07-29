@@ -12,9 +12,38 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 
 from pathlib import Path
 import os
+import environ
+from django.contrib.messages import constants as messages
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
+
+# Initialize environment variables
+env = environ.Env()
+environ.Env.read_env()
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')  # Your Gmail address
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')  # Your Gmail app-specific password
+
+# Default email address to use for various automated correspondence from the site
+DEFAULT_FROM_EMAIL = EMAIL_HOST_USER
+
+# Email address that will receive the contact form submissions
+CONTACT_EMAIL = env('CONTACT_EMAIL', default='office@workflowtime.com')
+
+# Message tags
+
+MESSAGE_TAGS = {
+    messages.DEBUG: 'debug',
+    messages.INFO: 'info',
+    messages.SUCCESS: 'success',
+    messages.WARNING: 'warning',
+    messages.ERROR: 'danger',
+}
 
 
 # Quick-start development settings - unsuitable for production
@@ -38,7 +67,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    
     'account',
     'qexal',
 ]
