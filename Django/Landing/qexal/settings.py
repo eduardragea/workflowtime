@@ -57,8 +57,8 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'workflowtime.pythonanywhere.com',
-    'www.yourdomain.com',
-    'yourdomain.com',
+    'www.workflowtime.com',
+    'workflowtime.com',
 ]
 
 
