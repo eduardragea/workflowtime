@@ -55,7 +55,7 @@ SECRET_KEY = 'django-insecure-k7x#6z(#5^unb=y+#yn#-pfc$uoz5ut*mlhze57i5vd3if&&i(
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [
+ALLOWED_HOSTS = [ '*',
     'workflowtime.pythonanywhere.com',
     'www.workflowtime.com',
     'workflowtime.com',
