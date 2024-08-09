@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 {% block hero %}
 <section class="hero-1 bg-center bg-primary position-relative" style="background-image: url(images/hero-1-bg.png);" id="home">
@@ -7,7 +8,7 @@
             <div class="col-lg-5">
                 <h1 class="text-white display-4 font-weight-semibold mb-4 hero-1-title">Automate Your Workflow with AI</h1>
                 <p class="text-white-70 mb-4  mb-lg-5">Experience the future of business operations with Workflow Time. Our AI-powered solutions are designed to streamline your processes, save time, and reduce costs, helping you stay ahead in a competitive market.</p>
-                <a href="#services" class="btn btn-lg btn-light rounded-pill me-2">Get Started</a>
+                <a href="#services" class="btn btn-lg btn-light rounded-pill me-2">{% trans "Get Started" %}</a>
                 <!-- Play Video button
                 <div class="d-inline-block" data-bs-toggle="modal" data-bs-target="#watchvideomodal">
                     <a href="javascript: void(0);" class="video-play-icon text-white">

@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -36,6 +37,15 @@
 
     {% block hero %}
     {% endblock hero %}
+
+    <div>
+        {% if LANGUAGE_CODE == 'en' %}
+            <a href="{% url 'set_language' 'ro' %}">Switch to Romanian</a>
+        {% elif LANGUAGE_CODE == 'ro' %}
+            <a href="{% url 'set_language' 'en' %}">Switch to English</a>
+        {% endif %}
+    </div>
+
 
     {% block services %}
         {% include 'partials/services.html' %}

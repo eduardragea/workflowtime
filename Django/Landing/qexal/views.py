@@ -1,8 +1,22 @@
 from django.http.response import JsonResponse
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.core.mail import send_mail, BadHeaderError
 from django.conf import settings
 import re
+from django.utils import translation
+from django.http import HttpResponse
+
+def set_language(request, lang_code):
+    # Activate the selected language
+    translation.activate(lang_code)
+
+    # Redirect back to the previous page or home page
+    response = redirect(request.META.get('HTTP_REFERER', '/'))
+
+    # Set a cookie to remember the user's language preference
+    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
+
+    return response
 
 # Index Pages
 def index(request):

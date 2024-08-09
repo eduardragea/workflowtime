@@ -22,9 +22,9 @@ from qexal import views
 
 
 urlpatterns = [
-    
+
     path('admin/', admin.site.urls),
-    
+
     # Index
     path('',views.index,name="index"),
     path('index-1/',views.index1,name="index1"),
@@ -36,12 +36,14 @@ urlpatterns = [
     path('index-7/',views.index7,name="index7"),
     path('index-8/',views.index8,name="index8"),
     path('index-9/',views.index9,name="index9"),
-    
-    
-    # Account 
+
+    path('set-language/<str:lang_code>/', views.set_language, name='set_language'),
+
+
+    # Account
     path('account/',include("account.urls")),
-    
+
     # Contact
     path('contact/',views.contact,name="contact")
-    
+
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
