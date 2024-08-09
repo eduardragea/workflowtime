@@ -37,7 +37,7 @@ urlpatterns = [
     path('index-8/',views.index8,name="index8"),
     path('index-9/',views.index9,name="index9"),
 
-    path('set-language/<str:lang_code>/', views.set_language, name='set_language'),
+    path('set-language/', views.set_language, name='set_language'),
 
 
     # Account

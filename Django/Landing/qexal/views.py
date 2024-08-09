@@ -6,17 +6,16 @@ import re
 from django.utils import translation
 from django.http import HttpResponse
 
-def set_language(request, lang_code):
-    # Activate the selected language
-    translation.activate(lang_code)
+def set_language(request):
+    lang_code = request.GET.get('lang_code')
 
-    # Redirect back to the previous page or home page
-    response = redirect(request.META.get('HTTP_REFERER', '/'))
-
-    # Set a cookie to remember the user's language preference
-    response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
-
-    return response
+    if lang_code:
+        translation.activate(lang_code)
+        response = redirect(request.META.get('HTTP_REFERER', '/'))
+        response.set_cookie(settings.LANGUAGE_COOKIE_NAME, lang_code)
+        return response
+    else:
+        return redirect('/')
 
 # Index Pages
 def index(request):

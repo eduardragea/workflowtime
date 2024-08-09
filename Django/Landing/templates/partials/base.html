@@ -39,11 +39,13 @@
     {% endblock hero %}
 
     <div>
-        {% if LANGUAGE_CODE == 'en' %}
-            <a href="{% url 'set_language' 'ro' %}">Switch to Romanian</a>
-        {% elif LANGUAGE_CODE == 'ro' %}
-            <a href="{% url 'set_language' 'en' %}">Switch to English</a>
-        {% endif %}
+      <form method="get" action="{% url 'set_language' %}">
+    <select name="lang_code" onchange="this.form.submit()">
+        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
+        <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %}>Romanian</option>
+    </select>
+</form>
+
     </div>
 
 
