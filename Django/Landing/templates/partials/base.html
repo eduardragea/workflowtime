@@ -1,5 +1,4 @@
 {% load static %}
-{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -37,17 +36,6 @@
 
     {% block hero %}
     {% endblock hero %}
-
-    <div>
-      <form method="get" action="{% url 'set_language' %}">
-    <select name="lang_code" onchange="this.form.submit()">
-        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>English</option>
-        <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %}>Romanian</option>
-    </select>
-</form>
-
-    </div>
-
 
     {% block services %}
         {% include 'partials/services.html' %}
