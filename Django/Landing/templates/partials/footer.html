@@ -14,53 +14,13 @@
             </div>
             <!-- end col -->
 
-            <div class="col-lg-7 ms-lg-auto">
-                <div class="row">
-                    <div class="col-lg-3 col-6">
-                        <div class="mt-4 mt-lg-0">
-                            <h4 class="text-white font-size-18 mb-3">Customer</h4>
-                            <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="javascript: void(0);" class="footer-link">Works</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Strategy</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Releases</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Press</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Mission</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="mt-4 mt-lg-0">
-                            <h4 class="text-white font-size-18 mb-3">Product</h4>
-                            <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="javascript: void(0);" class="footer-link">Trending</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Popular</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Customers</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Features</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="mt-4 mt-lg-0">
-                            <h4 class="text-white font-size-18 mb-3">Information</h4>
-                            <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="javascript: void(0);" class="footer-link">Developers</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Support</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Customer Service</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Get Started</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Guide</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="col-lg-3 col-6">
-                        <div class="mt-4 mt-lg-0">
-                            <h4 class="text-white font-size-18 mb-3">Support</h4>
-                            <ul class="list-unstyled footer-sub-menu">
-                                <li><a href="javascript: void(0);" class="footer-link">FAQ</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Contact</a></li>
-                                <li><a href="javascript: void(0);" class="footer-link">Disscusion</a></li>
-                            </ul>
-                        </div>
-                    </div>
+            <div class="col-lg-6 ms-lg-auto d-flex justify-content-end align-items-start">
+                <div class="mt-4 mt-lg-0 text-start" style="padding-right: 40px;">
+                    <a href="#" class="text-white-50 d-block mb-2" data-bs-toggle="modal" data-bs-target="#termsModal">Terms and Conditions</a>
+                    <a href="#" class="text-white-50 d-block mb-2" data-bs-toggle="modal" data-bs-target="#privacyModal">Privacy Policy</a>
+                    <a href="#" class="text-white-50 d-block mb-2" data-bs-toggle="modal" data-bs-target="#cookieModal">Cookie Policy</a>
+                    <a href="https://anpc.ro/" target="_blank" class="text-white-50 d-block mb-2">ANPC</a>
+                    <a href="https://ec.europa.eu/consumers/odr/main/index.cfm?event=main.home2.show&lng=RO" target="_blank" class="text-white-50 d-block mb-2">SOL</a>
                 </div>
             </div>
             <!-- end col -->
@@ -72,13 +32,75 @@
                 <div class="text-center mt-5">
                     <p class="text-white-50 f-15 mb-0">
                         <script>
-                        document.write(new Date().getFullYear())
-                    </script> © Workflow Time</p>
+                            document.write(new Date().getFullYear())
+                        </script> © Workflow Time
+                    </p>
                 </div>
             </div>
             <!-- end col -->
         </div>
         <!-- end row -->
+
+        <!-- Terms and Conditions Modal -->
+        <div class="modal fade" id="termsModal" tabindex="-1" aria-labelledby="termsModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="termsModalLabel">Terms and Conditions</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                      {% block terms_content %}
+                          {% include 'partials/terms_content.html' %}
+                      {% endblock terms_content %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Privacy Policy Modal -->
+        <div class="modal fade" id="privacyModal" tabindex="-1" aria-labelledby="privacyModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="privacyModalLabel">Privacy Policy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% block privacy_content %}
+                            {% include 'partials/privacy_policy_content.html' %}
+                        {% endblock privacy_content %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cookie Policy Modal -->
+        <div class="modal fade" id="cookieModal" tabindex="-1" aria-labelledby="cookieModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="cookieModalLabel">Cookie Policy</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        {% block cookie_content %}
+                            {% include 'partials/cookie_policy_content.html' %}
+                        {% endblock cookie_content %}
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </div>
     <!-- end container -->
 </footer>
