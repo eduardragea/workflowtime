@@ -1,12 +1,13 @@
 {% load static %}
+{% load i18n %}
 
 {% block content %}
 <section class="section" id="contact">
     <div class="container">
         <div class="row">
             <div class="col-lg-6">
-                <h2 class="fw-bold mb-4">Get in Touch</h2>
-                <p class="text-muted mb-5">Ready to take the next step? Fill out the form below and let’s start a conversation about how Workflow Time can transform your business.</p>
+                <h2 class="fw-bold mb-4">{% trans "Get in Touch" %}</h2>
+                <p class="text-muted mb-5">{% trans "Ready to take the next step? Fill out the form below and let’s start a conversation about how Workflow Time can transform your business." %}</p>
 
                 <div>
                     <div id="message"></div>
@@ -15,28 +16,28 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="mb-4">
-                                    <label for="name" class="text-muted form-label">Name</label>
-                                    <input name="name" id="name" type="text" class="form-control" placeholder="Enter name*" required>
+                                    <label for="name" class="text-muted form-label">{% trans "Name" %}</label>
+                                    <input name="name" id="name" type="text" class="form-control" placeholder="{% trans 'Enter name*' %}" required>
                                 </div>
                             </div>
                             <div class="col-lg-6">
                                 <div class="mb-4">
-                                    <label for="email" class="text-muted form-label">Email</label>
-                                    <input name="email" id="email" type="email" class="form-control" placeholder="Enter email*" required>
+                                    <label for="email" class="text-muted form-label">{% trans "Email" %}</label>
+                                    <input name="email" id="email" type="email" class="form-control" placeholder="{% trans 'Enter email*' %}" required>
                                 </div>
                             </div>
                             <div class="col-md-12">
                                 <div class="mb-4">
-                                    <label for="subject" class="text-muted form-label">Subject</label>
-                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="Enter Subject" required>
+                                    <label for="subject" class="text-muted form-label">{% trans "Subject" %}</label>
+                                    <input type="text" class="form-control" id="subject" name="subject" placeholder="{% trans 'Enter Subject' %}" required>
                                 </div>
 
                                 <div class="mb-4 pb-2">
-                                    <label for="comments" class="text-muted form-label">Message</label>
-                                    <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="Enter message..." required></textarea>
+                                    <label for="comments" class="text-muted form-label">{% trans "Message" %}</label>
+                                    <textarea name="comments" id="comments" rows="4" class="form-control" placeholder="{% trans 'Enter message...' %}" required></textarea>
                                 </div>
 
-                                <button type="submit" id="submit" name="send" class="btn btn-primary">Send Message</button>
+                                <button type="submit" id="submit" name="send" class="btn btn-primary">{% trans "Send Message" %}</button>
 
                             </div>
                         </div>
@@ -89,7 +90,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
     }).then(response => response.json()).then(data => {
         const messageDiv = document.getElementById('message');
         if (data.success_message) {
-            messageDiv.innerHTML = `<fieldset><div id='success_page'><h3>${data.success_message}</h3><p>Thank you <strong>${formData.get('name')}</strong>, your message has been submitted to us.</p></div></fieldset>`;
+            messageDiv.innerHTML = `<fieldset><div id='success_page'><h3>${data.success_message}</h3><p>{% trans "Thank you" %} <strong>${formData.get('name')}</strong>, {% trans "your message has been submitted to us." %}</p></div></fieldset>`;
             messageDiv.className = 'alert alert-success';
             form.reset();
         } else if (data.error_message) {
@@ -97,7 +98,7 @@ document.getElementById('contactForm').addEventListener('submit', function(event
             messageDiv.className = 'alert alert-danger';
         }
     }).catch(error => {
-        document.getElementById('message').innerHTML = 'An error occurred. Please try again.';
+        document.getElementById('message').innerHTML = '{% trans "An error occurred. Please try again." %}';
         document.getElementById('message').className = 'alert alert-danger';
     });
 });

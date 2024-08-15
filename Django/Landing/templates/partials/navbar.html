@@ -16,23 +16,23 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav ms-auto navbar-center" id="navbar-navlist">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
+                    <a href="#home" class="nav-link">{% trans "Home" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
+                    <a href="#services" class="nav-link">{% trans "Services" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#features" class="nav-link">Features</a>
+                    <a href="#features" class="nav-link">{% trans "Features" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#team" class="nav-link">Team</a>
+                    <a href="#team" class="nav-link">{% trans "Team" %}</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact Us</a>
+                    <a href="#contact" class="nav-link">{% trans "Contact Us" %}</a>
                 </li>
             </ul>
             <!-- Request a Demo Button -->
-            <a href="https://calendly.com/office-workflowtime/30min" target="_blank" class="btn btn-sm rounded-pill nav-btn ms-lg-3">Request a Demo</a>
+            <a href="https://calendly.com/office-workflowtime/30min" target="_blank" class="btn btn-sm rounded-pill nav-btn ms-lg-3">{% trans "Request a Demo" %}</a>
             <!-- Language Switcher Form -->
             <form method="get" action="{% url 'set_language' %}" class="language-switcher ms-lg-3">
                 <select name="lang_code" class="form-select" onchange="this.form.submit()">

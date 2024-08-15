@@ -26,10 +26,170 @@ msgstr ""
 msgid "Romanian"
 msgstr ""
 
-#: templates/partials/hero-1.html:10
+msgid "Automate Your Workflow with AI"
+msgstr "Automatizați-vă Fluxul de Lucru cu AI"
+
+msgid "Experience the future of business operations with Workflow Time. Our AI-powered solutions are designed to streamline your processes, save time, and reduce costs, helping you stay ahead in a competitive market."
+msgstr "Experimentați viitorul operațiunilor de afaceri cu Workflow Time. Soluțiile noastre bazate pe inteligență artificială sunt concepute pentru a vă simplifica procesele, economisi timp și reduce costurile, ajutându-vă să rămâneți în fruntea pieței competitive."
+
 msgid "Get Started"
 msgstr "Începeți"
 
-#: templates/partials/services.html:9
+msgid "Watch The Video!"
+msgstr "Urmărește Videoclipul!"
+
+msgid "Get in Touch"
+msgstr "Contactați-ne"
+
+msgid "Ready to take the next step? Fill out the form below and let’s start a conversation about how Workflow Time can transform your business."
+msgstr "Sunteți gata să faceți următorul pas? Completați formularul de mai jos și să începem o discuție despre cum Workflow Time poate transforma afacerea dumneavoastră."
+
+msgid "Name"
+msgstr "Nume"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Subject"
+msgstr "Subiect"
+
+msgid "Message"
+msgstr "Mesaj"
+
+msgid "Enter name*"
+msgstr "Introduceți numele*"
+
+msgid "Enter email*"
+msgstr "Introduceți email-ul*"
+
+msgid "Enter Subject"
+msgstr "Introduceți subiectul"
+
+msgid "Enter message..."
+msgstr "Introduceți mesajul..."
+
+msgid "Send Message"
+msgstr "Trimiteți Mesajul"
+
+msgid "Thank you"
+msgstr "Vă mulțumim"
+
+msgid "your message has been submitted to us."
+msgstr "mesajul dumneavoastră a fost trimis către noi."
+
+msgid "An error occurred. Please try again."
+msgstr "A apărut o eroare. Vă rugăm să încercați din nou."
+
+msgid "Experience the Future"
+msgstr "Experimentați Viitorul"
+
+msgid "Unlock your business's potential with our advanced AI solutions. Revolutionize your processes and achieve new levels of success."
+msgstr "Dezvoltați potențialul afacerii dvs. cu soluțiile noastre avansate de AI. Revoluționați procesele și atingeți noi niveluri de succes."
+
+msgid "Start now"
+msgstr "Începeți acum"
+
+msgid "Our Features"
+msgstr "Funcționalitățile Noastre"
+
+msgid "Discover the innovative capabilities of Workflow Time that set us apart and drive your business forward."
+msgstr "Descoperiți capabilitățile inovatoare ale Workflow Time care ne diferențiază și vă propulsează afacerea înainte."
+
+msgid "Intelligent Task Scheduling"
+msgstr "Programare Inteligentă a Sarcinilor"
+
+msgid "Optimize your workflow with AI-driven task scheduling that adapts to your business needs. Ensure tasks are prioritized and completed efficiently, minimizing downtime and maximizing productivity."
+msgstr "Optimizați-vă fluxul de lucru cu programarea sarcinilor bazată pe inteligență artificială, adaptată nevoilor afacerii dumneavoastră. Asigurați-vă că sarcinile sunt prioritizate și finalizate eficient, minimizând perioadele de inactivitate și maximizând productivitatea."
+
+msgid "Find out more"
+msgstr "Află mai multe"
+
+msgid "Automated Reporting"
+msgstr "Raportare Automată"
+
+msgid "Generate comprehensive reports automatically, providing actionable insights into your operations with minimal effort. Stay informed and make data-driven decisions to enhance your business performance."
+msgstr "Generați rapoarte complete automat, oferind informații practice despre operațiunile dumneavoastră cu un minim de efort. Rămâneți informat și luați decizii bazate pe date pentru a îmbunătăți performanța afacerii dumneavoastră."
+
+msgid "Start Your Automation Journey Today"
+msgstr "Începeți-vă Călătoria de Automatizare Astăzi"
+
+msgid "Let us show you how Workflow Time can transform your operations. Schedule a demo today and experience the benefits of automation firsthand."
+msgstr "Permiteți-ne să vă arătăm cum Workflow Time vă poate transforma operațiunile. Programați o demonstrație astăzi și experimentați beneficiile automatizării din prima mână."
+
+msgid "Ask for Demonstration"
+msgstr "Solicitați o Demonstrație"
+
+msgid "Empowering your business with AI-driven automation solutions. Transform, optimize, and grow with Workflow Time."
+msgstr "Împuternicim afacerea dvs. cu soluții de automatizare bazate pe AI. Transformați, optimizați și creșteți cu Workflow Time."
+
+msgid "Terms and Conditions"
+msgstr "Termeni și Condiții"
+
+msgid "Privacy Policy"
+msgstr "Politica de Confidențialitate"
+
+msgid "Cookie Policy"
+msgstr "Politica de Cookie-uri"
+
+msgid "ANPC"
+msgstr "ANPC"
+
+msgid "SOL"
+msgstr "SOL"
+
+msgid "Close"
+msgstr "Închide"
+
+msgid "Home"
+msgstr "Acasă"
+
+msgid "Services"
+msgstr "Servicii"
+
+msgid "Features"
+msgstr "Funcționalități"
+
+msgid "Team"
+msgstr "Echipa"
+
+msgid "Contact Us"
+msgstr "Contactați-ne"
+
+msgid "Request a Demo"
+msgstr "Solicitați o Demonstrație"
+
 msgid "Our Services"
-msgstr "Serviciile noastre"
+msgstr "Serviciile Noastre"
+
+msgid "Discover how Workflow Time can transform your business operations with cutting-edge AI solutions designed to enhance productivity and cut costs."
+msgstr "Descoperiți cum Workflow Time poate transforma operațiunile afacerii dvs. cu soluții AI de ultimă generație, concepute pentru a îmbunătăți productivitatea și a reduce costurile."
+
+msgid "Workflow Automation"
+msgstr "Automatizarea Fluxului de Lucru"
+
+msgid "Leverage AI to streamline repetitive tasks across your business operations."
+msgstr "Utilizați AI pentru a eficientiza sarcinile repetitive din operațiunile afacerii dvs."
+
+msgid "AI Integration"
+msgstr "Integrare AI"
+
+msgid "Implement advanced AI systems into your existing workflows to enhance efficiency and decision-making."
+msgstr "Implementați sisteme AI avansate în fluxurile dvs. de lucru existente pentru a îmbunătăți eficiența și procesul decizional."
+
+msgid "Easy to Customize"
+msgstr "Ușor de Personalizat"
+
+msgid "Our team will customize and implement flexible processes which can be tailored to the specific needs of your business."
+msgstr "Echipa noastră va personaliza și implementa procese flexibile care pot fi adaptate nevoilor specifice ale afacerii dvs."
+
+msgid "Our Team Members"
+msgstr "Membrii Echipei Noastre"
+
+msgid "Meet the dedicated professionals behind Workflow Time. Our team combines expertise in AI, automation, and business optimization to bring you cutting-edge solutions that drive success."
+msgstr "Faceți cunoștință cu profesioniștii dedicați din spatele Workflow Time. Echipa noastră combină expertiza în AI, automatizare și optimizarea afacerilor pentru a vă oferi soluții de ultimă generație care generează succes."
+
+msgid "Operations Manager"
+msgstr "Manager Operațiuni"
+
+msgid "AI Specialist"
+msgstr "Specialist AI"

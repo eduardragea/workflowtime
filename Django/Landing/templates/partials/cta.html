@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 
 {% block cta %}
 <!-- CTA start -->
@@ -12,9 +13,9 @@
                         <div class="row justify-content-center">
                             <div class="col-lg-10">
                                 <div class="p-3">
-                                    <h2 class="text-white mb-4">Experience the Future</h2>
-                                    <p class="text-white-70 font-size-16 mb-4 pb-3">Unlock your business's potential with our advanced AI solutions. Revolutionize your processes and achieve new levels of success.</p>
-                                    <a href="#contact" class="btn btn-light rounded-pill">Start now</a>
+                                    <h2 class="text-white mb-4">{% trans "Experience the Future" %}</h2>
+                                    <p class="text-white-70 font-size-16 mb-4 pb-3">{% trans "Unlock your business's potential with our advanced AI solutions. Revolutionize your processes and achieve new levels of success." %}</p>
+                                    <a href="#contact" class="btn btn-light rounded-pill">{% trans "Start now" %}</a>
                                 </div>
                             </div>
                         </div>

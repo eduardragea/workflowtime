@@ -25,10 +25,170 @@ msgstr ""
 msgid "Romanian"
 msgstr ""
 
-#: templates/partials/hero-1.html:10
+msgid "Automate Your Workflow with AI"
+msgstr "Automate Your Workflow with AI"
+
+msgid "Experience the future of business operations with Workflow Time. Our AI-powered solutions are designed to streamline your processes, save time, and reduce costs, helping you stay ahead in a competitive market."
+msgstr "Experience the future of business operations with Workflow Time. Our AI-powered solutions are designed to streamline your processes, save time, and reduce costs, helping you stay ahead in a competitive market."
+
 msgid "Get Started"
 msgstr "Get Started"
 
-#: templates/partials/services.html:9
+msgid "Watch The Video!"
+msgstr "Watch The Video!"
+
+msgid "Get in Touch"
+msgstr "Get in Touch"
+
+msgid "Ready to take the next step? Fill out the form below and let’s start a conversation about how Workflow Time can transform your business."
+msgstr "Ready to take the next step? Fill out the form below and let’s start a conversation about how Workflow Time can transform your business."
+
+msgid "Name"
+msgstr "Name"
+
+msgid "Email"
+msgstr "Email"
+
+msgid "Subject"
+msgstr "Subject"
+
+msgid "Message"
+msgstr "Message"
+
+msgid "Enter name*"
+msgstr "Enter name*"
+
+msgid "Enter email*"
+msgstr "Enter email*"
+
+msgid "Enter Subject"
+msgstr "Enter Subject"
+
+msgid "Enter message..."
+msgstr "Enter message..."
+
+msgid "Send Message"
+msgstr "Send Message"
+
+msgid "Thank you"
+msgstr "Thank you"
+
+msgid "your message has been submitted to us."
+msgstr "your message has been submitted to us."
+
+msgid "An error occurred. Please try again."
+msgstr "An error occurred. Please try again."
+
+msgid "Experience the Future"
+msgstr "Experience the Future"
+
+msgid "Unlock your business's potential with our advanced AI solutions. Revolutionize your processes and achieve new levels of success."
+msgstr "Unlock your business's potential with our advanced AI solutions. Revolutionize your processes and achieve new levels of success."
+
+msgid "Start now"
+msgstr "Start now"
+
+msgid "Our Features"
+msgstr "Our Features"
+
+msgid "Discover the innovative capabilities of Workflow Time that set us apart and drive your business forward."
+msgstr "Discover the innovative capabilities of Workflow Time that set us apart and drive your business forward."
+
+msgid "Intelligent Task Scheduling"
+msgstr "Intelligent Task Scheduling"
+
+msgid "Optimize your workflow with AI-driven task scheduling that adapts to your business needs. Ensure tasks are prioritized and completed efficiently, minimizing downtime and maximizing productivity."
+msgstr "Optimize your workflow with AI-driven task scheduling that adapts to your business needs. Ensure tasks are prioritized and completed efficiently, minimizing downtime and maximizing productivity."
+
+msgid "Find out more"
+msgstr "Find out more"
+
+msgid "Automated Reporting"
+msgstr "Automated Reporting"
+
+msgid "Generate comprehensive reports automatically, providing actionable insights into your operations with minimal effort. Stay informed and make data-driven decisions to enhance your business performance."
+msgstr "Generate comprehensive reports automatically, providing actionable insights into your operations with minimal effort. Stay informed and make data-driven decisions to enhance your business performance."
+
+msgid "Start Your Automation Journey Today"
+msgstr "Start Your Automation Journey Today"
+
+msgid "Let us show you how Workflow Time can transform your operations. Schedule a demo today and experience the benefits of automation firsthand."
+msgstr "Let us show you how Workflow Time can transform your operations. Schedule a demo today and experience the benefits of automation firsthand."
+
+msgid "Ask for Demonstration"
+msgstr "Ask for Demonstration"
+
+msgid "Empowering your business with AI-driven automation solutions. Transform, optimize, and grow with Workflow Time."
+msgstr "Empowering your business with AI-driven automation solutions. Transform, optimize, and grow with Workflow Time."
+
+msgid "Terms and Conditions"
+msgstr "Terms and Conditions"
+
+msgid "Privacy Policy"
+msgstr "Privacy Policy"
+
+msgid "Cookie Policy"
+msgstr "Cookie Policy"
+
+msgid "ANPC"
+msgstr "ANPC"
+
+msgid "SOL"
+msgstr "SOL"
+
+msgid "Close"
+msgstr "Close"
+
+msgid "Home"
+msgstr "Home"
+
+msgid "Services"
+msgstr "Services"
+
+msgid "Features"
+msgstr "Features"
+
+msgid "Team"
+msgstr "Team"
+
+msgid "Contact Us"
+msgstr "Contact Us"
+
+msgid "Request a Demo"
+msgstr "Request a Demo"
+
 msgid "Our Services"
 msgstr "Our Services"
+
+msgid "Discover how Workflow Time can transform your business operations with cutting-edge AI solutions designed to enhance productivity and cut costs."
+msgstr "Discover how Workflow Time can transform your business operations with cutting-edge AI solutions designed to enhance productivity and cut costs."
+
+msgid "Workflow Automation"
+msgstr "Workflow Automation"
+
+msgid "Leverage AI to streamline repetitive tasks across your business operations."
+msgstr "Leverage AI to streamline repetitive tasks across your business operations."
+
+msgid "AI Integration"
+msgstr "AI Integration"
+
+msgid "Implement advanced AI systems into your existing workflows to enhance efficiency and decision-making."
+msgstr "Implement advanced AI systems into your existing workflows to enhance efficiency and decision-making."
+
+msgid "Easy to Customize"
+msgstr "Easy to Customize"
+
+msgid "Our team will customize and implement flexible processes which can be tailored to the specific needs of your business."
+msgstr "Our team will customize and implement flexible processes which can be tailored to the specific needs of your business."
+
+msgid "Our Team Members"
+msgstr "Our Team Members"
+
+msgid "Meet the dedicated professionals behind Workflow Time. Our team combines expertise in AI, automation, and business optimization to bring you cutting-edge solutions that drive success."
+msgstr "Meet the dedicated professionals behind Workflow Time. Our team combines expertise in AI, automation, and business optimization to bring you cutting-edge solutions that drive success."
+
+msgid "Operations Manager"
+msgstr "Operations Manager"
+
+msgid "AI Specialist"
+msgstr "AI Specialist"
