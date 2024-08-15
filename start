@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Define the path to your workflowtime directory
+WORKFLOW_DIR="/home/edyedyr/workflowtime"
+
+# Define the path to your virtual environment
+VENV_PATH="$WORKFLOW_DIR/venv/bin/activate"
+
+# Open the first terminal tab to run the Django server
+gnome-terminal --tab -- bash -c "cd '$WORKFLOW_DIR'; source '$VENV_PATH'; cd Django/Landing; python3 manage.py runserver; exec bash"
+
+# Open the second terminal tab for Git operations, starting in workflowtime
+gnome-terminal --tab -- bash --login -c "cd '$WORKFLOW_DIR'; source '$WORKFLOW_DIR/venv/bin/activate'; exec bash"
