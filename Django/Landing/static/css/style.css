@@ -19,10 +19,10 @@
 12.Contact
 13.Footer
 ***********************/
-/* 
+/*
 // variables.scss
 */
-@import url("https://fonts.googleapis.com/css2?family=Assistant:wght@400;600;700&family=Open+Sans:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap");
 :root {
   --bs-primary: #2753ff;
   --bs-primary-rgb: hexToRGB(#2753ff);
@@ -48,7 +48,7 @@
   --bs-white-rgb: hexToRGB(#fff);
 }
 
-/* 
+/*
 // 1. General
 */
 a {
@@ -62,7 +62,7 @@ a:hover {
 }
 
 body {
-  font-family: "Open Sans", sans-serif;
+  font-family: "Onest", sans-serif;
   color: #29344a;
   background: var(--bs-body-bg);
   font-size: 15px;
@@ -78,7 +78,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: "Assistant", sans-serif;
+  font-family: "Onest", sans-serif;
   font-weight: 600;
 }
 
@@ -94,7 +94,7 @@ h6 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* 
+/*
 // 2. Icons
 */
 .icon-fill-primary {
@@ -206,7 +206,7 @@ h6 {
     transform: rotate(360deg);
   }
 }
-/* 
+/*
 // 3. Menu
 */
 .nav-item .nav-link {
@@ -237,12 +237,12 @@ h6 {
 .navbar .navbar-nav li a {
   line-height: 26px;
   color: rgba(239, 241, 245, 0.7);
-  font-size: 16px;
+  font-size: 15px;
   transition: all 0.3s;
   background-color: transparent !important;
   padding: 6px 0;
   margin: 0 15px;
-  font-family: "Assistant", sans-serif;
+  font-family: "Onest", sans-serif;
   font-weight: 600;
 }
 .navbar .navbar-nav li .nav-link {
@@ -415,7 +415,7 @@ h6 {
   }
 }
 
-/* 
+/*
 // 04.Components
 */
 @media (min-width: 1200px) {
@@ -945,7 +945,7 @@ h6 {
   cursor: pointer;
 }
 
-/* 
+/*
 // 05.Helper
 */
 .text-primary {
@@ -1314,7 +1314,7 @@ h6 {
   background-color: rgba(0, 0, 0, 0.9);
 }
 
-/* 
+/*
 // 06.Loader
 */
 #preloader {
@@ -1364,7 +1364,7 @@ h6 {
     transform: scale(1);
   }
 }
-/* 
+/*
 // 08.Hero
 */
 .hero-1 {
@@ -1631,7 +1631,7 @@ h6 {
   background-color: var(--bs-navbar-bg) !important;
 }
 
-/* 
+/*
 // 09. Service
 */
 .service-box .service-box-content {
@@ -1665,7 +1665,7 @@ h6 {
   color: rgba(255, 255, 255, 0.8) !important;
 }
 
-/* 
+/*
 // 10. Features
 */
 .features-img {
@@ -1717,7 +1717,7 @@ h6 {
   border-color: #343a40;
 }
 
-/* 
+/*
 // 11. Pricing
 */
 .pricing-tab .nav-pills {
@@ -1757,7 +1757,7 @@ h6 {
   color: rgba(255, 255, 255, 0.8);
 }
 
-/* 
+/*
 // 12. Team
 */
 .team-box .team-social-item {
@@ -1821,7 +1821,7 @@ h6 {
   color: #fff;
 }
 
-/* 
+/*
 // 13. Contact
 */
 .form-control {
@@ -1864,7 +1864,7 @@ h6 {
   background-color: #343a40;
 }
 
-/* 
+/*
 // 14. Footer
 */
 .social-icon {
@@ -2006,3 +2006,86 @@ h6 {
   --bs-footer-bg-dark:#1e2835;
   --bs-bg-light: #1a2432;
 }/*# sourceMappingURL=style.css.map */
+
+.navbar-custom .language-switcher {
+    position: relative;
+    margin-left: 1rem;
+    display: inline-block;
+    transition: all 0.3s ease;
+}
+
+/* Styling for the select element */
+.navbar-custom .language-switcher .form-select {
+    background-color: transparent;
+    border: none;
+    color: rgba(239, 241, 245, 0.7); /* Light gray initial color */
+    font-family: "Onest", sans-serif;
+    font-weight: 600;
+    line-height: 1.5;
+    font-size: 15px; /* Proportional text size */
+    padding: 5px 10px; /* Consistent padding */
+    margin: 0;
+    appearance: none;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px; /* Rounded corners for a modern look */
+}
+
+/* Flag size and visibility */
+.navbar-custom .language-switcher .form-select option::before {
+    content: attr(data-flag);
+    display: inline-block;
+    margin-right: 5px;
+    font-size: 18px; /* Adequate flag size */
+}
+
+/* Sticky state styling for larger screens */
+@media (min-width: 992px) {
+    .nav-sticky.navbar .language-switcher .form-select {
+        color: #6c757d !important; /* Darker gray when sticky */
+    }
+
+    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .form-select {
+        color: #adb5bd !important; /* Lighter gray in dark mode when sticky */
+    }
+}
+
+/* Consistent color for mobile */
+@media (max-width: 991px) {
+    .navbar-custom .language-switcher .form-select {
+        color: #6c757d !important; /* Consistent darker gray for mobile */
+    }
+}
+
+/* Hover effect with subtle background and rounded corners */
+.navbar-custom .language-switcher:hover::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    z-index: -1;
+}
+
+/* Ensure dropdown arrow is removed across all browsers */
+.navbar-custom .language-switcher .form-select::-ms-expand {
+    display: none;
+}
+.navbar-custom .language-switcher .form-select {
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    background-image: none !important;
+}
+
+/* Dropdown options styling */
+.navbar-custom .language-switcher .form-select option {
+    color: #000;
+    background-color: #fff;
+}
