@@ -61,6 +61,14 @@ a:hover {
   color: #2753ff;
 }
 
+/* This rule applies to WebKit browsers on Windows */
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    body {
+        zoom: 0.8; /* Adjust as needed for 125% scaling */
+    }
+}
+
+
 body {
   font-family: "Onest", sans-serif;
   color: #29344a;
