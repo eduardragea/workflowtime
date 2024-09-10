@@ -36,8 +36,8 @@
             <!-- Language Switcher Form -->
             <form method="get" action="{% url 'set_language' %}" class="language-switcher ms-lg-3">
                 <select name="lang_code" class="form-select" onchange="this.form.submit()">
-                  <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>&#x1F1EC;&#x1F1E7; EN</option>
-                  <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %}>&#x1F1F7;&#x1F1F4; RO</option>
+                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>🇬🇧 EN</option>
+                    <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %}>🇷🇴 RO</option>
                 </select>
             </form>
         </div>
