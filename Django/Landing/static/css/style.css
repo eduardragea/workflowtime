@@ -2019,7 +2019,7 @@ h6 {
     background-color: transparent;
     border: none;
     color: rgba(239, 241, 245, 0.7); /* Light gray initial color */
-    font-family: 'Segoe UI Emoji', "Onest", sans-serif;
+    font-family: "Segoe UI Emoji", "Onest", sans-serif;
     font-weight: 600;
     line-height: 1.5;
     font-size: 15px; /* Proportional text size */
