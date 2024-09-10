@@ -1,7 +1,7 @@
-/* Template Name: Qexal - Responsive Bootstrap 5 Landing Page Template
-   Author: Themesbrand
-   Version: 1.0.0
-   Created: Jan 2019
+/* Name: WorkflowTime
+   Author: Eduard Ragea
+   Version: 1.1.0
+   Created: Sept 2024
    File Description: Main js file
 */
 
@@ -26,7 +26,7 @@ window.addEventListener('scroll', (ev) => {
 })
 
 
-// Smooth scroll 
+// Smooth scroll
 var scroll = new SmoothScroll('#navbar-navlist a', {
     speed: 500
 });
@@ -97,12 +97,12 @@ feather.replace();
 
 // Preloader
 
-window.onload = function loader() { 
+window.onload = function loader() {
     setTimeout(() => {
         document.getElementById('preloader').style.visibility = 'hidden';
         document.getElementById('preloader').style.opacity = '0';
     }, 350);
-} 
+}
 
 // Swicher
 function toggleSwitcher() {
