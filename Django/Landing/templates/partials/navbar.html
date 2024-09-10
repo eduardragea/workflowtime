@@ -35,12 +35,13 @@
             <a href="https://calendly.com/office-workflowtime/30min" target="_blank" class="btn btn-sm rounded-pill nav-btn ms-lg-3">{% trans "Request a Demo" %}</a>
             <!-- Language Switcher Form -->
             <!-- Language Switcher Form -->
-<form method="get" action="{% url 'set_language' %}" class="language-switcher ms-lg-3">
-    <select name="lang_code" class="form-select" onchange="this.form.submit()">
-        <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %} data-flag="🇬🇧">🇬🇧 EN</option>
-        <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %} data-flag="🇷🇴">🇷🇴 RO</option>
-    </select>
-</form>
+            <!-- Language Switcher Form -->
+            <form method="get" action="{% url 'set_language' %}" class="language-switcher ms-lg-3">
+                <select name="lang_code" class="form-select" onchange="this.form.submit()">
+                    <option value="en" {% if LANGUAGE_CODE == 'en' %}>🇬🇧 EN</option>
+                    <option value="ro" {% if LANGUAGE_CODE == 'ro' %}>🇷🇴 RO</option>
+                </select>
+            </form>
 
         </div>
     </div>

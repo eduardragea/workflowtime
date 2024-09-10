@@ -2030,19 +2030,7 @@ h6 {
     border-radius: 5px;
 }
 
-/* Flag size and visibility */
-.language-switcher .form-select option::before {
-    content: attr(data-flag);
-    display: inline-block;
-    margin-right: 5px;
-    font-size: 18px; /* Adequate flag size */
-}
-
-/* Ensure dropdown arrow is removed across all browsers */
-.language-switcher .form-select::-ms-expand {
-    display: none;
-}
-
+/* Remove default arrow */
 .language-switcher .form-select {
     -moz-appearance: none;
     -webkit-appearance: none;
@@ -2054,22 +2042,4 @@ h6 {
 .language-switcher .form-select option {
     color: #000;
     background-color: #fff;
-}
-
-/* Sticky state styling for larger screens */
-@media (min-width: 992px) {
-    .nav-sticky.navbar .language-switcher .form-select {
-        color: #6c757d !important;
-    }
-
-    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .form-select {
-        color: #adb5bd !important;
-    }
-}
-
-/* Consistent color for mobile */
-@media (max-width: 991px) {
-    .language-switcher .form-select {
-        color: #6c757d !important;
-    }
 }
