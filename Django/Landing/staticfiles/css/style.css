@@ -2018,17 +2018,16 @@ h6 {
 .navbar-custom .language-switcher .form-select {
     background-color: transparent;
     border: none;
-    color: rgba(239, 241, 245, 0.7); /* Light gray initial color */
-    font-family: "Segoe UI Emoji", "Onest", sans-serif;
+    color: rgba(239, 241, 245, 0.7);
+    font-family: "Segoe UI Emoji", "Apple Color Emoji", "Noto Color Emoji", sans-serif;
     font-weight: 600;
     line-height: 1.5;
-    font-size: 15px; /* Proportional text size */
-    padding: 5px 10px; /* Consistent padding */
-    margin: 0;
+    font-size: 15px;
+    padding: 5px 10px;
     appearance: none;
     text-align: center;
     cursor: pointer;
-    border-radius: 5px; /* Rounded corners for a modern look */
+    border-radius: 5px;
 }
 
 /* Flag size and visibility */
