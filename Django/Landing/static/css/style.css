@@ -2015,7 +2015,7 @@ h6 {
 }
 
 /* Styling for the select element */
-.navbar-custom .language-switcher .form-select {
+.language-switcher .form-select {
     background-color: transparent;
     border: none;
     color: rgba(239, 241, 245, 0.7);
@@ -2031,52 +2031,19 @@ h6 {
 }
 
 /* Flag size and visibility */
-.navbar-custom .language-switcher .form-select option::before {
+.language-switcher .form-select option::before {
     content: attr(data-flag);
     display: inline-block;
     margin-right: 5px;
     font-size: 18px; /* Adequate flag size */
 }
 
-/* Sticky state styling for larger screens */
-@media (min-width: 992px) {
-    .nav-sticky.navbar .language-switcher .form-select {
-        color: #6c757d !important; /* Darker gray when sticky */
-    }
-
-    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .form-select {
-        color: #adb5bd !important; /* Lighter gray in dark mode when sticky */
-    }
-}
-
-/* Consistent color for mobile */
-@media (max-width: 991px) {
-    .navbar-custom .language-switcher .form-select {
-        color: #6c757d !important; /* Consistent darker gray for mobile */
-    }
-}
-
-/* Hover effect with subtle background and rounded corners */
-.navbar-custom .language-switcher:hover::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    padding: 5px 10px;
-    border-radius: 5px;
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: -1;
-}
-
 /* Ensure dropdown arrow is removed across all browsers */
-.navbar-custom .language-switcher .form-select::-ms-expand {
+.language-switcher .form-select::-ms-expand {
     display: none;
 }
-.navbar-custom .language-switcher .form-select {
+
+.language-switcher .form-select {
     -moz-appearance: none;
     -webkit-appearance: none;
     appearance: none;
@@ -2084,7 +2051,25 @@ h6 {
 }
 
 /* Dropdown options styling */
-.navbar-custom .language-switcher .form-select option {
+.language-switcher .form-select option {
     color: #000;
     background-color: #fff;
+}
+
+/* Sticky state styling for larger screens */
+@media (min-width: 992px) {
+    .nav-sticky.navbar .language-switcher .form-select {
+        color: #6c757d !important;
+    }
+
+    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .form-select {
+        color: #adb5bd !important;
+    }
+}
+
+/* Consistent color for mobile */
+@media (max-width: 991px) {
+    .language-switcher .form-select {
+        color: #6c757d !important;
+    }
 }
