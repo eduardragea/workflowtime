@@ -92,23 +92,23 @@ msgstr "Începeți acum"
 msgid "Our Features"
 msgstr "Funcționalitățile Noastre"
 
-msgid "Discover the innovative capabilities of Workflow Time that set us apart and drive your business forward."
-msgstr "Descoperiți capabilitățile inovatoare ale Workflow Time care ne diferențiază și vă propulsează afacerea înainte."
+msgid "Every business is unique, so our solutions are fully customizable, scalable, and integrate seamlessly. We craft automation that grows with your needs."
+msgstr "Fiecare afacere este unică, așa că soluțiile noastre sunt complet personalizabile, scalabile și se integrează perfect. Creăm automatizări care cresc odată cu nevoile tale."
 
-msgid "Intelligent Task Scheduling"
-msgstr "Programare Inteligentă a Sarcinilor"
+msgid "Automate Document Workflows"
+msgstr "Automatizați fluxurile de lucru ale documentelor"
 
-msgid "Optimize your workflow with AI-driven task scheduling that adapts to your business needs. Ensure tasks are prioritized and completed efficiently, minimizing downtime and maximizing productivity."
-msgstr "Optimizați-vă fluxul de lucru cu programarea sarcinilor bazată pe inteligență artificială, adaptată nevoilor afacerii dumneavoastră. Asigurați-vă că sarcinile sunt prioritizate și finalizate eficient, minimizând perioadele de inactivitate și maximizând productivitatea."
+msgid "Simplify how your team handles documents with our tailored automation solutions. From document generation to approvals and storage, our system streamlines every step. Automatically route documents to the right people, reduce manual data entry, and ensure compliance with every task."
+msgstr "Simplificați modul în care echipa dumneavoastră gestionează documentele cu soluțiile noastre de automatizare personalizate. De la generarea documentelor la aprobări și stocare, sistemul nostru eficientizează fiecare pas. Direcționați automat documentele către persoanele potrivite, reduceți introducerea manuală a datelor și asigurați conformitatea cu fiecare sarcină."
+
+msgid "Intelligent Process Automation"
+msgstr "Automatizarea inteligentă a proceselor"
+
+msgid "Our intelligent process automation adapts to your business needs, whether it's managing customer inquiries or automating repetitive tasks. We provide end-to-end solutions that integrate seamlessly with your current software, optimizing workflows for maximum efficiency."
+msgstr "Automatizarea noastră inteligentă a proceselor se adaptează la nevoile afacerii tale, fie că este vorba de gestionarea cererilor clienților sau automatizarea sarcinilor repetitive. Oferim soluții complete care se integrează perfect cu software-ul existent, optimizând fluxurile de lucru pentru eficiență maximă."
 
 msgid "Find out more"
 msgstr "Află mai multe"
-
-msgid "Automated Reporting"
-msgstr "Raportare Automată"
-
-msgid "Generate comprehensive reports automatically, providing actionable insights into your operations with minimal effort. Stay informed and make data-driven decisions to enhance your business performance."
-msgstr "Generați rapoarte complete automat, oferind informații practice despre operațiunile dumneavoastră cu un minim de efort. Rămâneți informat și luați decizii bazate pe date pentru a îmbunătăți performanța afacerii dumneavoastră."
 
 msgid "Start Your Automation Journey Today"
 msgstr "Începeți-vă Călătoria de Automatizare Astăzi"

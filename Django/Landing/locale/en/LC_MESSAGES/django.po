@@ -91,23 +91,24 @@ msgstr "Start now"
 msgid "Our Features"
 msgstr "Our Features"
 
-msgid "Discover the innovative capabilities of Workflow Time that set us apart and drive your business forward."
-msgstr "Discover the innovative capabilities of Workflow Time that set us apart and drive your business forward."
-
-msgid "Intelligent Task Scheduling"
-msgstr "Intelligent Task Scheduling"
-
-msgid "Optimize your workflow with AI-driven task scheduling that adapts to your business needs. Ensure tasks are prioritized and completed efficiently, minimizing downtime and maximizing productivity."
-msgstr "Optimize your workflow with AI-driven task scheduling that adapts to your business needs. Ensure tasks are prioritized and completed efficiently, minimizing downtime and maximizing productivity."
-
 msgid "Find out more"
 msgstr "Find out more"
 
-msgid "Automated Reporting"
-msgstr "Automated Reporting"
+msgid "Every business is unique, so our solutions are fully customizable, scalable, and integrate seamlessly. We craft automation that grows with your needs."
+msgstr "Every business is unique, so our solutions are fully customizable, scalable, and integrate seamlessly. We craft automation that grows with your needs."
 
-msgid "Generate comprehensive reports automatically, providing actionable insights into your operations with minimal effort. Stay informed and make data-driven decisions to enhance your business performance."
-msgstr "Generate comprehensive reports automatically, providing actionable insights into your operations with minimal effort. Stay informed and make data-driven decisions to enhance your business performance."
+msgid "Automate Document Workflows"
+msgstr "Automate Document Workflows"
+
+msgid "Simplify how your team handles documents with our tailored automation solutions. From document generation to approvals and storage, our system streamlines every step. Automatically route documents to the right people, reduce manual data entry, and ensure compliance with every task."
+msgstr "Simplify how your team handles documents with our tailored automation solutions. From document generation to approvals and storage, our system streamlines every step. Automatically route documents to the right people, reduce manual data entry, and ensure compliance with every task."
+
+msgid "Intelligent Process Automation"
+msgstr "Intelligent Process Automation"
+
+msgid "Our intelligent process automation adapts to your business needs, whether it's managing customer inquiries or automating repetitive tasks. We provide end-to-end solutions that integrate seamlessly with your current software, optimizing workflows for maximum efficiency."
+msgstr "Our intelligent process automation adapts to your business needs, whether it's managing customer inquiries or automating repetitive tasks. We provide end-to-end solutions that integrate seamlessly with your current software, optimizing workflows for maximum efficiency."
+
 
 msgid "Start Your Automation Journey Today"
 msgstr "Start Your Automation Journey Today"
