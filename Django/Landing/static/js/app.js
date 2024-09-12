@@ -28,10 +28,18 @@ if (typeof zoomFactor === 'undefined') {
     var zoomFactor = 1.0; // Fallback to 1.0 if zoomFactor is not defined
 }
 
-// Initialize SmoothScroll without any manual offset adjustments
+// Smooth scroll with dynamic offset based on zoom factor
 var scroll = new SmoothScroll('#navbar-navlist a', {
     speed: 500,
-    // Remove the manual offset calculation to use the default behavior
+    offset: function (anchor, toggle) {
+        // If zoomFactor is different than 1.0, adjust the scroll offset
+        if (zoomFactor !== 1.0) {
+            var rect = anchor.getBoundingClientRect();
+            // Adjust the offset based on the zoom factor
+            return rect.top / zoomFactor;
+        }
+        return 0; // Use default offset for non-zoomed environments
+    }
 });
 
 // Contact Form
