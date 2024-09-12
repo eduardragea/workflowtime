@@ -23,26 +23,35 @@ window.addEventListener('scroll', (ev) => {
     windowScroll();
 });
 
-// Ensure the zoomFactor is available globally from the <head> section
-if (typeof zoomFactor === 'undefined') {
-    var zoomFactor = 1.0; // Fallback to 1.0 if zoomFactor is not defined
-}
+// Detect zoom and apply smooth scroll offset dynamically
+var zoomFactor = 1.0; // Default zoom factor
 
-// Smooth scroll with dynamic offset based on zoom factor
-var scroll = new SmoothScroll('#navbar-navlist a', {
-    speed: 500,
-    offset: function (anchor, toggle) {
-        // If zoomFactor is different than 1.0, adjust the scroll offset
-        if (zoomFactor !== 1.0) {
-            var rect = anchor.getBoundingClientRect();
-            // Adjust the offset based on the zoom factor
-            return rect.top / zoomFactor;
+document.addEventListener('DOMContentLoaded', function() {
+    // Detect Windows and adjust zoomFactor based on devicePixelRatio
+    if (navigator.platform.indexOf('Win') > -1) {
+        var pixelRatio = window.devicePixelRatio;
+
+        if (pixelRatio === 1.25) {
+            zoomFactor = 0.9; // For 125% scaling
+        } else if (pixelRatio === 1.5) {
+            zoomFactor = 0.75; // For 150% scaling
         }
-        return 0; // Use default offset for non-zoomed environments
     }
+
+    // Initialize SmoothScroll and adjust scroll offset dynamically
+    var scroll = new SmoothScroll('#navbar-navlist a', {
+        speed: 500,
+        offset: function(anchor, toggle) {
+            // Adjust scroll offset based on the zoom factor if zoom is applied
+            if (zoomFactor !== 1.0) {
+                return anchor.getBoundingClientRect().top * (1 - zoomFactor);
+            }
+            return 0; // Default offset for non-zoomed environments
+        }
+    });
 });
 
-// Contact Form
+// Contact Form validation
 function validateForm() {
     var name = document.forms["myForm"]["name"].value;
     var email = document.forms["myForm"]["email"].value;
@@ -100,7 +109,7 @@ function fadeIn() {
     }, 200);
 }
 
-// feather icon
+// Feather icons replacement
 feather.replace();
 
 // Preloader
@@ -111,7 +120,7 @@ window.onload = function loader() {
     }, 350);
 }
 
-// Switcher
+// Style Switcher
 function toggleSwitcher() {
     var i = document.getElementById('style-switcher');
     if (i.style.left === "-189px") {
@@ -126,7 +135,7 @@ function setColor(theme) {
     toggleSwitcher(false);
 }
 
-// Light-Dark theme switch
+// Light-Dark theme toggle
 const btn = document.getElementById("mode");
 btn.addEventListener("click", (e) => {
     let theme = localStorage.getItem("theme");
@@ -139,7 +148,7 @@ btn.addEventListener("click", (e) => {
     }
 });
 
-// Navbar toggle on smaller screens
+// Navbar toggle for smaller screens
 function toggleClose() {
     if (window.innerWidth < 992) {
         var menus = document.getElementById("navbar-navlist").querySelectorAll('li > a');
