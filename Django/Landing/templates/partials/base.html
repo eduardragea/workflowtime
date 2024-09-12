@@ -10,32 +10,7 @@
         <meta content="Eduard Ragea" name="author" />
         <!-- favicon -->
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
-        <script>
-    var zoomFactor = 1.0; // Default zoom factor
-
-    document.addEventListener('DOMContentLoaded', function() {
-        // Detect Windows OS
-        if (navigator.platform.indexOf('Win') > -1) {
-            var pixelRatio = window.devicePixelRatio;
-
-            // Apply different zoom levels based on scaling
-            if (pixelRatio === 1) {
-                zoomFactor = 1.0; // 100% scaling
-                document.body.style.zoom = '1.0';
-            } else if (pixelRatio === 1.25) {
-                zoomFactor = 0.9; // 125% scaling
-                document.body.style.zoom = '0.9';
-            } else if (pixelRatio === 1.5) {
-                zoomFactor = 0.75; // 150% scaling
-                document.body.style.zoom = '0.75';
-            } else {
-                zoomFactor = 1.0; // Default zoom
-                document.body.style.zoom = '1.0';
-            }
-        }
-        console.log("Zoom factor: " + zoomFactor);
-    });
-</script>
+        
 
 
 
