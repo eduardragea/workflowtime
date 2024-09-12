@@ -5,8 +5,6 @@
    File Description: Main js file
 */
 
-
-
 //  Window scroll sticky class add
 function windowScroll() {
     const navbar = document.getElementById("navbar");
@@ -23,14 +21,18 @@ function windowScroll() {
 window.addEventListener('scroll', (ev) => {
     ev.preventDefault();
     windowScroll();
-})
-
-
-// Smooth scroll
-var scroll = new SmoothScroll('#navbar-navlist a', {
-    speed: 500
 });
 
+// Ensure the zoomFactor is available globally from the <head> section
+if (typeof zoomFactor === 'undefined') {
+    var zoomFactor = 1.0; // Fallback to 1.0 if zoomFactor is not defined
+}
+
+// Initialize SmoothScroll without any manual offset adjustments
+var scroll = new SmoothScroll('#navbar-navlist a', {
+    speed: 500,
+    // Remove the manual offset calculation to use the default behavior
+});
 
 // Contact Form
 function validateForm() {
@@ -82,7 +84,7 @@ function fadeIn() {
     var opacity = 0;
     var intervalID = setInterval(function () {
         if (opacity < 1) {
-            opacity = opacity + 0.5
+            opacity = opacity + 0.5;
             fade.style.opacity = opacity;
         } else {
             clearInterval(intervalID);
@@ -91,12 +93,9 @@ function fadeIn() {
 }
 
 // feather icon
-
 feather.replace();
 
-
 // Preloader
-
 window.onload = function loader() {
     setTimeout(() => {
         document.getElementById('preloader').style.visibility = 'hidden';
@@ -104,7 +103,7 @@ window.onload = function loader() {
     }, 350);
 }
 
-// Swicher
+// Switcher
 function toggleSwitcher() {
     var i = document.getElementById('style-switcher');
     if (i.style.left === "-189px") {
@@ -112,18 +111,14 @@ function toggleSwitcher() {
     } else {
         i.style.left = "-189px";
     }
-};
+}
 
 function setColor(theme) {
     document.getElementById('color-opt').href = './css/colors/' + theme + '.css';
     toggleSwitcher(false);
-};
+}
 
-
-
-//
-/********************* light-dark js ************************/
-//
+// Light-Dark theme switch
 const btn = document.getElementById("mode");
 btn.addEventListener("click", (e) => {
     let theme = localStorage.getItem("theme");
@@ -136,18 +131,18 @@ btn.addEventListener("click", (e) => {
     }
 });
 
+// Navbar toggle on smaller screens
 function toggleClose() {
-    if(window.innerWidth < 992){
+    if (window.innerWidth < 992) {
         var menus = document.getElementById("navbar-navlist").querySelectorAll('li > a');
         Array.from(menus).forEach((menu) => {
-            menu.addEventListener("click", function()  {
-                if(!document.querySelector(".navbar-toggler")?.classList.contains("collapsed")) {
+            menu.addEventListener("click", function () {
+                if (!document.querySelector(".navbar-toggler")?.classList.contains("collapsed")) {
                     document.querySelector(".navbar-toggler")?.classList.add("collapsed");
-
                     document.querySelector(".navbar-collapse")?.classList.remove("show");
                 }
             });
-        })
+        });
     }
 }
 

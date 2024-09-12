@@ -11,35 +11,32 @@
         <!-- favicon -->
         <link rel="shortcut icon" href="{% static 'images/favicon.ico' %}" />
         <script>
+    var zoomFactor = 1.0; // Default zoom factor
+
     document.addEventListener('DOMContentLoaded', function() {
         // Detect Windows OS
         if (navigator.platform.indexOf('Win') > -1) {
-            // Get device pixel ratio (this reflects the scaling percentage)
             var pixelRatio = window.devicePixelRatio;
-
-            console.log("Device Pixel Ratio: ", pixelRatio);
 
             // Apply different zoom levels based on scaling
             if (pixelRatio === 1) {
-                // 100% scaling
-                document.body.style.zoom = '1.0'; // No zoom for 100%
-                console.log("Scaling at 100%, no zoom applied");
+                zoomFactor = 1.0; // 100% scaling
+                document.body.style.zoom = '1.0';
             } else if (pixelRatio === 1.25) {
-                // 125% scaling
-                document.body.style.zoom = '0.9'; // Apply zoom 0.9 for 125%
-                console.log("125% scaling detected, applying zoom 0.9");
+                zoomFactor = 0.9; // 125% scaling
+                document.body.style.zoom = '0.9';
             } else if (pixelRatio === 1.5) {
-                // 150% scaling
-                document.body.style.zoom = '0.75'; // Apply zoom 0.75 for 150%
-                console.log("150% scaling detected, applying zoom 0.75");
+                zoomFactor = 0.75; // 150% scaling
+                document.body.style.zoom = '0.75';
             } else {
-                // For any other scaling, use default zoom (or adjust based on preference)
-                document.body.style.zoom = '1.0'; // Default zoom
-                console.log("Other scaling detected, no zoom applied");
+                zoomFactor = 1.0; // Default zoom
+                document.body.style.zoom = '1.0';
             }
         }
+        console.log("Zoom factor: " + zoomFactor);
     });
 </script>
+
 
 
 
