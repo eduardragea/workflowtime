@@ -38,38 +38,48 @@
     <!-- Button that displays the current language -->
     <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
         {% if LANGUAGE_CODE == 'en' %}
-            🇬🇧 EN
+            <img src="{% static 'images/flags/gb.png' %}" alt="EN" style="width: 18px; margin-right: 5px;"> EN
         {% elif LANGUAGE_CODE == 'ro' %}
-            🇷🇴 RO
+            <img src="{% static 'images/flags/ro.png' %}" alt="RO" style="width: 18px; margin-right: 5px;"> RO
         {% else %}
-            🌐 Language
+            <span>🌐</span> Language
         {% endif %}
     </button>
     <ul class="dropdown-menu" aria-labelledby="languageDropdown">
         <!-- Dropdown items for selecting a language -->
         <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('en')">🇬🇧 English</a>
+            <a class="dropdown-item" href="#" onclick="setLanguage('en')">
+                <img src="{% static 'images/flags/gb.png' %}" alt="EN" style="width: 18px; margin-right: 5px;"> English
+            </a>
         </li>
         <li>
-            <a class="dropdown-item" href="#" onclick="setLanguage('ro')">🇷🇴 Romanian</a>
+            <a class="dropdown-item" href="#" onclick="setLanguage('ro')">
+                <img src="{% static 'images/flags/ro.png' %}" alt="RO" style="width: 18px; margin-right: 5px;"> Romanian
+            </a>
         </li>
     </ul>
 </div>
 
-<!-- Hidden form to submit the language change request -->
+
+<script>
+    function setLanguage(langCode) {
+        // Get the currently active language code from the button or some global context
+        const currentLangCode = "{{ LANGUAGE_CODE }}";
+
+        // Only submit the form if the selected language is different from the current one
+        if (langCode !== currentLangCode) {
+            document.getElementById('lang_code').value = langCode;
+            document.getElementById('language-form').submit();
+        }
+    }
+</script>
+
+
+<!-- Hidden form for language switching -->
 <form id="language-form" method="get" action="{% url 'set_language' %}">
     <input type="hidden" name="lang_code" id="lang_code">
 </form>
 
-<!-- JavaScript to handle language change -->
-<script>
-    function setLanguage(langCode) {
-        // Set the hidden form input value to the selected language code
-        document.getElementById('lang_code').value = langCode;
-        // Submit the hidden form to change the language
-        document.getElementById('language-form').submit();
-    }
-</script>
 
         </div>
     </div>
