@@ -34,12 +34,43 @@
             <!-- Request a Demo Button -->
             <a href="https://calendly.com/office-workflowtime/30min" target="_blank" class="btn btn-sm rounded-pill nav-btn ms-lg-3">{% trans "Request a Demo" %}</a>
             <!-- Language Switcher Form -->
-            <form method="get" action="{% url 'set_language' %}" class="language-switcher ms-lg-3">
-                <select name="lang_code" class="form-select" onchange="this.form.submit()">
-                    <option value="en" {% if LANGUAGE_CODE == 'en' %}selected{% endif %}>🇬🇧 EN</option>
-                    <option value="ro" {% if LANGUAGE_CODE == 'ro' %}selected{% endif %}>🇷🇴 RO</option>
-                </select>
-            </form>
+            <div class="dropdown language-switcher ms-lg-3">
+    <!-- Button that displays the current language -->
+    <button class="btn dropdown-toggle" type="button" id="languageDropdown" data-bs-toggle="dropdown" aria-expanded="false">
+        {% if LANGUAGE_CODE == 'en' %}
+            🇬🇧 EN
+        {% elif LANGUAGE_CODE == 'ro' %}
+            🇷🇴 RO
+        {% else %}
+            🌐 Language
+        {% endif %}
+    </button>
+    <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+        <!-- Dropdown items for selecting a language -->
+        <li>
+            <a class="dropdown-item" href="#" onclick="setLanguage('en')">🇬🇧 English</a>
+        </li>
+        <li>
+            <a class="dropdown-item" href="#" onclick="setLanguage('ro')">🇷🇴 Romanian</a>
+        </li>
+    </ul>
+</div>
+
+<!-- Hidden form to submit the language change request -->
+<form id="language-form" method="get" action="{% url 'set_language' %}">
+    <input type="hidden" name="lang_code" id="lang_code">
+</form>
+
+<!-- JavaScript to handle language change -->
+<script>
+    function setLanguage(langCode) {
+        // Set the hidden form input value to the selected language code
+        document.getElementById('lang_code').value = langCode;
+        // Submit the hidden form to change the language
+        document.getElementById('language-form').submit();
+    }
+</script>
+
         </div>
     </div>
     <!-- end container -->
