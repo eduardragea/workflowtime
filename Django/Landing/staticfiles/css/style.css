@@ -2007,6 +2007,7 @@ h6 {
   --bs-bg-light: #1a2432;
 }/*# sourceMappingURL=style.css.map */
 
+/* Language Switcher Styling */
 .navbar-custom .language-switcher {
     position: relative;
     margin-left: 1rem;
@@ -2014,78 +2015,86 @@ h6 {
     transition: all 0.3s ease;
 }
 
-/* Styling for the select element */
-.navbar-custom .language-switcher .form-select {
+/* Button styling to match previous select style */
+.navbar-custom .language-switcher .dropdown-toggle {
     background-color: transparent;
     border: none;
     color: rgba(239, 241, 245, 0.7); /* Light gray initial color */
-    font-family: "Onest", sans-serif;
+    font-family: "Onest", sans-serif, 'Segoe UI Emoji', 'Apple Color Emoji', 'Twemoji', 'Noto Color Emoji', sans-serif;
     font-weight: 600;
     line-height: 1.5;
     font-size: 15px; /* Proportional text size */
     padding: 5px 10px; /* Consistent padding */
     margin: 0;
-    appearance: none;
-    text-align: center;
     cursor: pointer;
     border-radius: 5px; /* Rounded corners for a modern look */
+    text-align: center;
+    display: flex;
+    align-items: center;
 }
 
-/* Flag size and visibility */
-.navbar-custom .language-switcher .form-select option::before {
-    content: attr(data-flag);
-    display: inline-block;
-    margin-right: 5px;
+/* Emoji flag size */
+.navbar-custom .language-switcher .dropdown-toggle span {
     font-size: 18px; /* Adequate flag size */
+    margin-right: 5px;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Twemoji', 'Noto Color Emoji', sans-serif;
+}
+
+
+/* Adjust dropdown caret styling */
+.navbar-custom .language-switcher .dropdown-toggle::after {
+    display: none; /* Remove default arrow */
+}
+
+/* Dropdown menu styling */
+.navbar-custom .language-switcher .dropdown-menu {
+    background-color: #fff;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Dropdown items */
+.navbar-custom .language-switcher .dropdown-item {
+    font-family: "Onest", sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    color: #000;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+}
+
+/* Add space between emoji flag and text */
+.navbar-custom .language-switcher .dropdown-item span {
+    margin-right: 8px;
 }
 
 /* Sticky state styling for larger screens */
 @media (min-width: 992px) {
-    .nav-sticky.navbar .language-switcher .form-select {
+    .nav-sticky.navbar .language-switcher .dropdown-toggle {
         color: #6c757d !important; /* Darker gray when sticky */
     }
 
-    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .form-select {
+    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .dropdown-toggle {
         color: #adb5bd !important; /* Lighter gray in dark mode when sticky */
     }
 }
 
 /* Consistent color for mobile */
 @media (max-width: 991px) {
-    .navbar-custom .language-switcher .form-select {
+    .navbar-custom .language-switcher .dropdown-toggle {
         color: #6c757d !important; /* Consistent darker gray for mobile */
     }
 }
 
 /* Hover effect with subtle background and rounded corners */
-.navbar-custom .language-switcher:hover::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 100%;
-    height: 100%;
-    padding: 5px 10px;
-    border-radius: 5px;
+.navbar-custom .language-switcher .dropdown-toggle:hover {
     background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: -1;
+    border-radius: 5px;
 }
 
 /* Ensure dropdown arrow is removed across all browsers */
-.navbar-custom .language-switcher .form-select::-ms-expand {
-    display: none;
-}
-.navbar-custom .language-switcher .form-select {
-    -moz-appearance: none;
-    -webkit-appearance: none;
-    appearance: none;
-    background-image: none !important;
-}
-
-/* Dropdown options styling */
-.navbar-custom .language-switcher .form-select option {
-    color: #000;
-    background-color: #fff;
+.navbar-custom .language-switcher .dropdown-toggle::after {
+    display: none !important;
 }

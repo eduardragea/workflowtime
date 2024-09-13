@@ -2020,7 +2020,7 @@ h6 {
     background-color: transparent;
     border: none;
     color: rgba(239, 241, 245, 0.7); /* Light gray initial color */
-    font-family: "Onest", sans-serif;
+    font-family: "Onest", sans-serif, 'Segoe UI Emoji', 'Apple Color Emoji', 'Twemoji', 'Noto Color Emoji', sans-serif;
     font-weight: 600;
     line-height: 1.5;
     font-size: 15px; /* Proportional text size */
@@ -2033,15 +2033,17 @@ h6 {
     align-items: center;
 }
 
-/* Adjust dropdown caret styling */
-.navbar-custom .language-switcher .dropdown-toggle::after {
-    display: none; /* Remove default arrow */
-}
-
 /* Emoji flag size */
 .navbar-custom .language-switcher .dropdown-toggle span {
     font-size: 18px; /* Adequate flag size */
     margin-right: 5px;
+    font-family: 'Segoe UI Emoji', 'Apple Color Emoji', 'Twemoji', 'Noto Color Emoji', sans-serif;
+}
+
+
+/* Adjust dropdown caret styling */
+.navbar-custom .language-switcher .dropdown-toggle::after {
+    display: none; /* Remove default arrow */
 }
 
 /* Dropdown menu styling */
