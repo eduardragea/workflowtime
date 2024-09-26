@@ -47,6 +47,6 @@ urlpatterns = [
     path('contact/',views.contact,name="contact"),
 
     # Track email
-    path('track/<str:email_id>/', views.email_opened_tracker, name='email_tracker'),
+    path('email-opened/<str:email_id>/1x1.png', views.email_opened_tracker, name='email_opened_tracker'),
 
 ]+ static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

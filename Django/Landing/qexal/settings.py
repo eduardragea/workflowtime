@@ -163,46 +163,6 @@ USE_I18N = True
 
 USE_TZ = True
 
-LOGGING = {
-    'version': 1,
-    'disable_existing_loggers': False,
-    'formatters': {
-        'verbose': {
-            'format': '{levelname} {asctime} {module} {message}',
-            'style': '{',
-        },
-        'simple': {
-            'format': '{levelname} {message}',
-            'style': '{',
-        },
-    },
-    'handlers': {
-        'file': {
-            'level': 'INFO',  # Set this to INFO or ERROR to suppress DEBUG logs
-            'class': 'logging.FileHandler',
-            'filename': os.path.join(BASE_DIR, 'email_tracking.log'),
-            'formatter': 'verbose',
-        },
-        'console': {
-            'level': 'INFO',  # Set this to INFO to reduce verbosity in the console
-            'class': 'logging.StreamHandler',
-            'formatter': 'simple',
-        },
-    },
-    'loggers': {
-        'django': {
-            'handlers': ['console'],
-            'level': 'INFO',  # This limits the verbosity of Django logs
-            'propagate': True,
-        },
-        'email_tracker': {
-            'handlers': ['file', 'console'],
-            'level': 'INFO',  # Keep this at INFO to track email opens
-            'propagate': False,
-        },
-    },
-}
-
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
