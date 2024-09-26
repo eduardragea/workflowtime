@@ -5,6 +5,20 @@ from django.conf import settings
 import re
 from django.utils import translation
 from django.http import HttpResponse
+from datetime import datetime
+import logging
+
+# Set up logging for email tracking
+logger = logging.getLogger(__name__)
+
+def email_opened_tracker(request, email_id):
+    # Log the email open event
+    logger.info(f"{email_id} opened at {datetime.now()} from {request.META.get('REMOTE_ADDR')}")
+
+    # Serve a 1x1 transparent image
+    with open('static/images/1x1.png', 'rb') as f:
+        return HttpResponse(f.read(), content_type="image/png")
+
 
 def set_language(request):
     lang_code = request.GET.get('lang_code')
