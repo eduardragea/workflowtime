@@ -189,7 +189,7 @@ msgid "Meet the dedicated professionals behind Workflow Time. Our team combines 
 msgstr "Faceți cunoștință cu profesioniștii dedicați din spatele Workflow Time. Echipa noastră combină expertiza în AI, automatizare și optimizarea afacerilor pentru a vă oferi soluții de ultimă generație care generează succes."
 
 msgid "Operations Manager"
-msgstr "Manager Operațiuni"
+msgstr "Cofondator și CEO"
 
 msgid "AI Specialist"
-msgstr "Specialist AI"
+msgstr "Cofondator și CTO"
