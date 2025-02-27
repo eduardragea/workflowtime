@@ -1370,7 +1370,7 @@ h6 {
 .hero-1 {
   padding: 150px 0 180px;
   width: 100%;
-  overflow: hidden;
+  overflow: visible;
 }
 
 .hero-content {
@@ -2062,6 +2062,78 @@ h6 {
     padding: 5px 10px;
     display: flex;
     align-items: center;
+}
+
+/* Desktop styles */
+.logo-cloud {
+  position: relative;
+  width: 100%;
+  min-height: 600px; /* Ensure enough space for logos */
+  overflow: visible; /* Allows clouds to extend */
+  padding: 10px; /* Prevents logos from being too close to edges */
+}
+
+.logo-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.logo-wrapper {
+  position: absolute; /* Ensures logos can be freely placed */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 120px; /* Match JavaScript positioning */
+  height: 120px;
+}
+
+/* Bubble effect behind the logos */
+.logo-wrapper::before {
+  content: "";
+  position: absolute;
+  width: 160px; /* Make the bubbles larger than the logo */
+  height: 160px;
+  background: rgba(255, 255, 255, 0.5); /* Lighter semi-transparent white */
+  border-radius: 50%;
+  filter: blur(35px); /* Stronger blur for a natural glow */
+  z-index: -1; /* Keeps the bubble behind the logo */
+}
+
+/* Standard logo size */
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+/* Make N8n & Sferal logos larger */
+.large-logo {
+  width: 130px; /* Increase size */
+  height: auto;
+  filter: none; /* Ensures default colors are correct */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.large-logo-sferal {
+  width: 160px; /* Increase size */
+  height: auto;
+  filter: none; /* Ensures default colors are correct */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+/* Make Notion logo smaller */
+.small-logo {
+  width: 70px; /* Decrease size */
+  height: auto;
+  filter: none; /* Ensures default colors are correct */
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+
+/* Hover effect */
+.logo:hover {
+  filter: brightness(1) saturate(100%) invert(70%) sepia(50%) saturate(700%) hue-rotate(5deg);
+  transform: scale(1.1);
 }
 
 /* Add space between emoji flag and text */
