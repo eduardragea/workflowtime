@@ -2084,8 +2084,8 @@ h6 {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 120px; /* Match JavaScript positioning */
-  height: 120px;
+  width: 100px; /* Match JavaScript positioning */
+  height: 100px;
 }
 
 /* Bubble effect behind the logos */
