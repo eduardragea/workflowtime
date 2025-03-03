@@ -2105,7 +2105,6 @@ h6 {
   width: 100%;
   min-height: 600px;
   overflow: visible; /* Prevents unwanted shifting */
-  padding: 10px;
   will-change: contents; /* Helps prevent reflows */
 }
 
@@ -2168,4 +2167,31 @@ h6 {
 .logo:hover {
   filter: brightness(1) saturate(100%) invert(70%) sepia(50%) saturate(700%) hue-rotate(5deg);
   transform: scale(1.1);
+}
+
+/* Mobile styles */
+@media screen and (max-width: 768px) {
+  
+  .logo {
+    width: 75px; /* Reduce size for mobile */
+  }
+
+  .large-logo {
+    width: 85px; /* Reduce size for mobile */
+  }
+
+  .large-logo-sferal {
+    width: 110px; /* Reduce size for mobile */
+  }
+
+  .small-logo {
+    width: 65px; /* Further reduce for mobile */
+  }
+
+  /* Reduce bubble effect for smaller logos */
+  .logo-wrapper::before {
+    width: 80px; 
+    height: 80px;
+    filter: blur(20px);
+  }
 }

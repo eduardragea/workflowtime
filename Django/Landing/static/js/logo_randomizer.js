@@ -10,15 +10,18 @@ document.addEventListener("DOMContentLoaded", function () {
     container.style.height = `${Math.max(450, logos.length * 100)}px`;
 
     function getLogoDimensions(logo) {
+        const isMobile = window.innerWidth <= 768; // Detect mobile
+    
         if (logo.classList.contains("large-logo")) {
-            return { width: 130, height: 130 };
+            return isMobile ? { width: 80, height: 80 } : { width: 130, height: 130 };
         } else if (logo.classList.contains("large-logo-sferal")) {
-            return { width: 160, height: 160 };
+            return isMobile ? { width: 100, height: 100 } : { width: 160, height: 160 };
         } else if (logo.classList.contains("small-logo")) {
-            return { width: 70, height: 70 };
+            return isMobile ? { width: 50, height: 50 } : { width: 70, height: 70 };
         }
-        return { width: 100, height: 100 }; // Default logo size
+        return isMobile ? { width: 60, height: 60 } : { width: 100, height: 100 }; // Default logo size
     }
+    
 
     function isOverlapping(x, y, width, height) {
         for (let pos of positions) {
