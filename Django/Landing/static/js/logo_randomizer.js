@@ -1,11 +1,12 @@
 document.addEventListener("DOMContentLoaded", function () {
     const container = document.querySelector(".logo-cloud");
     const logos = document.querySelectorAll(".logo-wrapper");
-    const positions = [];
+    const positions = new Set(); // Use a Set to ensure uniqueness
 
     const minPadding = 50; // Minimum padding between logos
+    const containerRect = container.getBoundingClientRect();
 
-    // Dynamically adjust the height of the container for better fit
+    // Ensure the container has a fixed height (avoid height-based shifts)
     container.style.height = `${Math.max(450, logos.length * 100)}px`;
 
     function getLogoDimensions(logo) {
@@ -20,10 +21,17 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function isOverlapping(x, y, width, height) {
-        return positions.some(pos => 
-            (x < pos.x + pos.width + minPadding && x + width + minPadding > pos.x &&
-             y < pos.y + pos.height + minPadding && y + height + minPadding > pos.y)
-        );
+        for (let pos of positions) {
+            if (
+                x < pos.x + pos.width + minPadding &&
+                x + width + minPadding > pos.x &&
+                y < pos.y + pos.height + minPadding &&
+                y + height + minPadding > pos.y
+            ) {
+                return true;
+            }
+        }
+        return false;
     }
 
     logos.forEach(logo => {
@@ -31,12 +39,12 @@ document.addEventListener("DOMContentLoaded", function () {
         let placed = false;
         let attempts = 0;
 
-        while (!placed && attempts < 200) { // Increased attempts to improve positioning
-            let x = Math.random() * (container.clientWidth - width - minPadding * 2) + minPadding;
-            let y = Math.random() * (container.clientHeight - height - minPadding * 2) + minPadding;
+        while (!placed && attempts < 200) {
+            let x = Math.random() * (containerRect.width - width - minPadding * 2) + minPadding;
+            let y = Math.random() * (containerRect.height - height - minPadding * 2) + minPadding;
 
             if (!isOverlapping(x, y, width, height)) {
-                positions.push({ x, y, width, height });
+                positions.add({ x, y, width, height });
                 logo.style.position = "absolute";
                 logo.style.left = `${x}px`;
                 logo.style.top = `${y}px`;
@@ -47,17 +55,24 @@ document.addEventListener("DOMContentLoaded", function () {
 
         // Fallback to force placement if no valid position is found
         if (!placed) {
-            for (let i = 0; i < container.clientWidth; i += 10) {
-                for (let j = 0; j < container.clientHeight; j += 10) {
+            for (let i = 0; i < containerRect.width; i += 10) {
+                for (let j = 0; j < containerRect.height; j += 10) {
                     if (!isOverlapping(i, j, width, height)) {
                         logo.style.position = "absolute";
                         logo.style.left = `${i}px`;
                         logo.style.top = `${j}px`;
-                        positions.push({ x: i, y: j, width, height });
+                        positions.add({ x: i, y: j, width, height });
                         return;
                     }
                 }
             }
         }
+    });
+
+    // Lock positions after the initial placement
+    window.addEventListener("scroll", () => {
+        logos.forEach(logo => {
+            logo.style.transform = "translate(0, 0)"; // Prevent any shifts
+        });
     });
 });

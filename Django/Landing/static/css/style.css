@@ -2066,26 +2066,25 @@ h6 {
 
 /* Desktop styles */
 .logo-cloud {
-  position: relative;
+  position: relative; /* Prevents absolute children from being affected by scrolling */
   width: 100%;
-  min-height: 600px; /* Ensure enough space for logos */
-  overflow: visible; /* Allows clouds to extend */
-  padding: 10px; /* Prevents logos from being too close to edges */
+  min-height: 600px;
+  overflow: visible; /* Prevents unwanted shifting */
+  padding: 10px;
+  will-change: contents; /* Helps prevent reflows */
+}
+
+.logo-wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .logo-container {
   position: relative;
   width: 100%;
   height: 100%;
-}
-
-.logo-wrapper {
-  position: absolute; /* Ensures logos can be freely placed */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100px; /* Match JavaScript positioning */
-  height: 100px;
 }
 
 /* Bubble effect behind the logos */
