@@ -60,14 +60,4 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         }
     });
-
-    // Recalculate positions when the window resizes
-    window.addEventListener("resize", () => {
-        logos.forEach(logo => {
-            logo.style.left = "";
-            logo.style.top = "";
-        });
-        positions.length = 0;
-        document.dispatchEvent(new Event("DOMContentLoaded"));
-    });
 });
