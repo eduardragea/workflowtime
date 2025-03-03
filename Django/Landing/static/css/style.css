@@ -2064,6 +2064,41 @@ h6 {
     align-items: center;
 }
 
+/* Add space between emoji flag and text */
+.navbar-custom .language-switcher .dropdown-item span {
+    margin-right: 8px;
+}
+
+/* Sticky state styling for larger screens */
+@media (min-width: 992px) {
+    .nav-sticky.navbar .language-switcher .dropdown-toggle {
+        color: #6c757d !important; /* Darker gray when sticky */
+    }
+
+    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .dropdown-toggle {
+        color: #adb5bd !important; /* Lighter gray in dark mode when sticky */
+    }
+}
+
+/* Consistent color for mobile */
+@media (max-width: 991px) {
+    .navbar-custom .language-switcher .dropdown-toggle {
+        color: #6c757d !important; /* Consistent darker gray for mobile */
+    }
+}
+
+/* Hover effect with subtle background and rounded corners */
+.navbar-custom .language-switcher .dropdown-toggle:hover {
+    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+/* Ensure dropdown arrow is removed across all browsers */
+.navbar-custom .language-switcher .dropdown-toggle::after {
+    display: none !important;
+}
+
 /* Desktop styles */
 .logo-cloud {
   position: relative; /* Prevents absolute children from being affected by scrolling */
@@ -2133,39 +2168,4 @@ h6 {
 .logo:hover {
   filter: brightness(1) saturate(100%) invert(70%) sepia(50%) saturate(700%) hue-rotate(5deg);
   transform: scale(1.1);
-}
-
-/* Add space between emoji flag and text */
-.navbar-custom .language-switcher .dropdown-item span {
-    margin-right: 8px;
-}
-
-/* Sticky state styling for larger screens */
-@media (min-width: 992px) {
-    .nav-sticky.navbar .language-switcher .dropdown-toggle {
-        color: #6c757d !important; /* Darker gray when sticky */
-    }
-
-    [data-bs-theme="dark"] .nav-sticky.navbar .language-switcher .dropdown-toggle {
-        color: #adb5bd !important; /* Lighter gray in dark mode when sticky */
-    }
-}
-
-/* Consistent color for mobile */
-@media (max-width: 991px) {
-    .navbar-custom .language-switcher .dropdown-toggle {
-        color: #6c757d !important; /* Consistent darker gray for mobile */
-    }
-}
-
-/* Hover effect with subtle background and rounded corners */
-.navbar-custom .language-switcher .dropdown-toggle:hover {
-    background-color: rgba(255, 255, 255, 0.1); /* Subtle hover effect */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    border-radius: 5px;
-}
-
-/* Ensure dropdown arrow is removed across all browsers */
-.navbar-custom .language-switcher .dropdown-toggle::after {
-    display: none !important;
 }
