@@ -39,6 +39,9 @@ urlpatterns = [
 
     path('set-language/', views.set_language, name='set_language'),
 
+    path('terms/', views.terms, name='terms'),
+    path('privacy/', views.privacy, name='privacy'),
+    path('cookies/', views.cookies, name='cookies'),
 
     # Account
     path('account/',include("account.urls")),

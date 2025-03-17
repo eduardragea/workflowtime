@@ -57,6 +57,15 @@ def index8(request):
 def index9(request):
     return render(request,"index/index-9.html")
 
+def terms(request):
+    return render(request, 'partials/terms_content.html')
+
+def privacy(request):
+    return render(request, 'partials/privacy_policy_content.html')
+
+def cookies(request):
+    return render(request, 'partials/cookie_policy_content.html')
+
 # Contact Form
 def contact(request):
     if request.method == "POST":
